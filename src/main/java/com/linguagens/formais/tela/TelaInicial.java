@@ -6,6 +6,7 @@
 package com.linguagens.formais.tela;
 
 import com.linguagens.formais.DeterminizaAFND;
+import com.linguagens.formais.RemoveMovimentoVazio;
 import java.util.ArrayList;
 
 /**
@@ -66,14 +67,19 @@ public class TelaInicial extends javax.swing.JFrame {
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(jTable1);
 
-        button1.setLabel("button1");
+        button1.setLabel("Determiniza");
         button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button1ActionPerformed(evt);
             }
         });
 
-        button2.setLabel("button2");
+        button2.setLabel("Remove mov vazio");
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         button3.setLabel("button3");
 
@@ -157,6 +163,30 @@ public class TelaInicial extends javax.swing.JFrame {
         
         teste.run(AFND);
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        RemoveMovimentoVazio teste = new RemoveMovimentoVazio();
+        ArrayList<String[]> AFNDV = new ArrayList<>();
+        
+        String[] novaLinha = new String[5];
+        novaLinha[0] = "->";
+        novaLinha[1] = "q0";
+        novaLinha[2] = "q0";
+        novaLinha[3] = "";
+        novaLinha[4] = "q1";
+        AFNDV.add(novaLinha);
+        
+        novaLinha = new String[5];
+        novaLinha[0] = "*";
+        novaLinha[1] = "q1";
+        novaLinha[2] = "";
+        novaLinha[3] = "q1";
+        novaLinha[4] = "";
+        AFNDV.add(novaLinha);
+        
+        teste.run(AFNDV);
+        
+    }//GEN-LAST:event_button2ActionPerformed
 
     /**
      * @param args the command line arguments

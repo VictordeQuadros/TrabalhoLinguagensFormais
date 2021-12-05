@@ -103,7 +103,7 @@
     </Container>
     <Component class="java.awt.Button" name="button1">
       <Properties>
-        <Property name="label" type="java.lang.String" value="button1"/>
+        <Property name="label" type="java.lang.String" value="Determiniza"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button1ActionPerformed"/>
@@ -111,8 +111,11 @@
     </Component>
     <Component class="java.awt.Button" name="button2">
       <Properties>
-        <Property name="label" type="java.lang.String" value="button2"/>
+        <Property name="label" type="java.lang.String" value="Remove mov vazio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="java.awt.Button" name="button3">
       <Properties>
